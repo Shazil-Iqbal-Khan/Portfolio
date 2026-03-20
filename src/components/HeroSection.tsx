@@ -66,8 +66,8 @@ const HeroSection = () => {
             {/* Main Heading */}
             <div className="overflow-hidden">
               <h1
-                className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] font-display font-black text-foreground leading-[0.85] mb-6 md:mb-8 animate-fade-up-delay-1"
-                style={{ transform: `translateY(${scrollY * 0.025}px)`, letterSpacing: '-0.04em' }}
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] font-display font-extralight text-foreground leading-[0.85] mb-6 md:mb-8 animate-fade-up-delay-1"
+                style={{ transform: `translateY(${scrollY * 0.025}px)`, letterSpacing: '0.08em' }}
               >
                 Hello
               </h1>
