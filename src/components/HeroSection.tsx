@@ -1,5 +1,5 @@
 import { ArrowDown } from "lucide-react";
-import heroPortrait from "@/assets/hero-portrait.png";
+import heroPortrait from "@/assets/portrait.png";
 import { useParallax, useCountUp } from "@/hooks/useScrollReveal";
 import { useState, useEffect } from "react";
 
