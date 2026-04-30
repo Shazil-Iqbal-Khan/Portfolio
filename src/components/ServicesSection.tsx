@@ -41,9 +41,7 @@ const ServicesSection = () => {
                 {service.desc}
               </p>
               <div className="mt-6 sm:mt-8 flex items-center gap-2 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500">
-                <span className="text-[11px] sm:text-[12px] font-body font-medium text-primary-foreground tracking-wider uppercase">
-                  Learn more
-                </span>
+                <span className="text-[11px] sm:text-[12px] font-body font-medium text-primary-foreground tracking-wider uppercase">Learn more</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-primary-foreground" />
               </div>
             </div>

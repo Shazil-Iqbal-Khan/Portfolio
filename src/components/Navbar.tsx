@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
-const navLinks = ["About Me", "Portfolio", "Services", "Blog"];
+const navLinks = ["About Me", "Portfolio", "Services", "Certificates", "Blog"];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -25,7 +24,7 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between h-14 sm:h-16 md:h-20">
         <a href="#" className="font-display text-lg sm:text-xl font-bold tracking-tight text-foreground">
-          D<span className="text-muted-foreground/50">.</span>Nova
+          M. Shazil Iqbal Khan
         </a>
 
         <ul className="hidden md:flex items-center gap-8 lg:gap-10">
@@ -57,7 +56,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu - Full screen overlay */}
+      {/* Mobile Menu */}
       <div className={`md:hidden fixed inset-0 top-14 sm:top-16 bg-background transition-all duration-500 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
         <div className="px-5 sm:px-8 py-10 flex flex-col h-full">
           <ul className="flex flex-col gap-6">
@@ -83,7 +82,7 @@ const Navbar = () => {
               >
                 Book A Call <ArrowUpRight className="w-4 h-4" />
               </a>
-              <p className="text-[12px] font-body text-muted-foreground mt-4">hello@dnova.design</p>
+              <p className="text-[12px] font-body text-muted-foreground mt-4">Programe.codeme@gmail.com</p>
             </div>
           </div>
         </div>

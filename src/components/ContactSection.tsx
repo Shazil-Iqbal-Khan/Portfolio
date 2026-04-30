@@ -1,8 +1,35 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+
+const FORMSPREE_ID = "xzdjwggq";
 
 const ContactSection = () => {
   const { ref, visible } = useScrollReveal();
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("sending");
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
 
   return (
     <section id="contact" className="py-20 sm:py-28 md:py-40 relative overflow-hidden">
@@ -24,29 +51,69 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <form className="max-w-xl mx-auto flex flex-col gap-6 sm:gap-8" onSubmit={(e) => e.preventDefault()}>
+        <form
+          className="max-w-xl mx-auto flex flex-col gap-6 sm:gap-8"
+          onSubmit={handleSubmit}
+        >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-            <input type="text" placeholder="Your Name" className="input-premium" />
-            <input type="email" placeholder="Your Email" className="input-premium" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              className="input-premium"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              className="input-premium"
+            />
           </div>
-          <input type="text" placeholder="Subject" className="input-premium" />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+            className="input-premium"
+          />
           <textarea
+            name="message"
             rows={4}
             placeholder="Tell me about your project..."
+            required
             className="input-premium resize-none"
           />
-          <button
-            type="submit"
-            className="self-start inline-flex items-center gap-3 bg-foreground text-primary-foreground px-8 sm:px-10 py-3.5 sm:py-4 text-[12px] sm:text-[13px] font-body font-medium tracking-[0.1em] uppercase hover:bg-foreground/85 transition-all duration-500 group"
-          >
-            Send Message
-            <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </button>
+
+          <div className="flex items-center gap-4 flex-wrap">
+            <button
+              type="submit"
+              disabled={status === "sending" || status === "success"}
+              className="inline-flex items-center gap-3 bg-foreground text-primary-foreground px-8 sm:px-10 py-3.5 sm:py-4 text-[12px] sm:text-[13px] font-body font-medium tracking-[0.1em] uppercase hover:bg-foreground/85 transition-all duration-500 group disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {status === "sending" ? "Sending..." : status === "success" ? "Message Sent!" : "Send Message"}
+              {status !== "sending" && status !== "success" && (
+                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              )}
+            </button>
+
+            {status === "success" && (
+              <p className="text-[12px] font-body text-muted-foreground">
+                Thanks! I'll get back to you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-[12px] font-body text-destructive">
+                Something went wrong. Please try again.
+              </p>
+            )}
+          </div>
         </form>
 
         <div className="mt-20 sm:mt-28 pt-8 sm:pt-10 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
-          <a href="mailto:hello@dnova.design" className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300">
-            hello@dnova.design
+          <a href="mailto:Programe.codeme@gmail.com" className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300">
+            Programe.codeme@gmail.com
           </a>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
             {["Dribbble", "Behance", "LinkedIn", "Twitter"].map((social) => (
@@ -59,7 +126,7 @@ const ContactSection = () => {
               </a>
             ))}
           </div>
-          <span className="text-[11px] sm:text-[12px] font-body text-muted-foreground">© 2024 D.Nova</span>
+          <span className="text-[11px] sm:text-[12px] font-body text-muted-foreground">© 2025 M. Shazil Iqbal Khan</span>
         </div>
       </div>
     </section>
