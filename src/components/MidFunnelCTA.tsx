@@ -21,14 +21,14 @@ const MidFunnelCTA = () => {
             <div className="flex items-center gap-2 mb-3">
               <Clock className="w-3.5 h-3.5 text-primary-foreground/50" />
               <span className="text-[10px] font-body font-medium tracking-[0.3em] uppercase text-primary-foreground/50">
-                Limited availability — 2 slots open this month
+                Available for new projects
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-primary-foreground tracking-tight leading-tight">
-              Ready to build something<br className="hidden sm:block" /> extraordinary together?
+              Ready to build your next<br className="hidden sm:block" /> AI-powered solution?
             </h2>
             <p className="text-[13px] sm:text-sm font-body font-light text-primary-foreground/60 mt-3 max-w-lg">
-              From concept to launch — I handle design, UX, and branding so you can focus on growing your business.
+              From concept to deployment — I build intelligent applications with modern AI, scalable backends, and clean code architecture.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
@@ -42,7 +42,7 @@ const MidFunnelCTA = () => {
               href="#portfolio"
               className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground px-7 py-3.5 text-[12px] font-body font-medium tracking-[0.1em] uppercase hover:bg-primary-foreground/10 transition-all duration-400"
             >
-              See My Work
+              View Projects
             </a>
           </div>
         </div>

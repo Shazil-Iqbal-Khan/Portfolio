@@ -20,18 +20,18 @@ const AboutSection = () => {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-display font-bold text-foreground leading-[1.1] tracking-tight"
               style={{ transform: `translateY(${Math.max(0, (scrollY - 400) * 0.015)}px)` }}
             >
-              I craft digital experiences that leave lasting impressions.
+              I build AI-powered applications that drive innovation and solve complex problems.
             </h2>
           </div>
           <div className="flex flex-col gap-6 sm:gap-8">
             <p className="text-sm sm:text-[15px] font-body font-light text-muted-foreground leading-[1.85] tracking-wide">
-              With over a decade of experience in product design, I have helped 200+ companies transform their digital presence.
+              With expertise in AI development and modern software engineering, I create intelligent solutions that leverage cutting-edge technologies like LLMs, computer vision, and real-time data systems.
             </p>
             <p className="text-sm sm:text-[15px] font-body font-light text-muted-foreground leading-[1.85] tracking-wide">
-              My approach blends strategic thinking with aesthetic precision. Every pixel serves a purpose, every interaction tells a story.
+              My approach combines practical AI implementation with clean code architecture. Every feature is built with scalability in mind, every integration serves a purpose.
             </p>
             <div className={`stagger-children ${visible ? "visible" : ""} grid grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-4 sm:gap-y-6 mt-4 sm:mt-6`}>
-              {["UI/UX Design", "Brand Strategy", "Design Systems", "Creative Direction"].map((skill) => (
+              {["AI Development", "Python & React", "API Integration", "Data Systems"].map((skill) => (
                 <div key={skill} className="border-t border-border pt-3 sm:pt-4 group cursor-default">
                   <span className="text-[12px] sm:text-[13px] font-body font-medium text-foreground group-hover:tracking-wider transition-all duration-500">
                     {skill}

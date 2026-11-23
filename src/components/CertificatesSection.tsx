@@ -5,11 +5,13 @@ import { ArrowUpRight, Award, X } from "lucide-react";
 import cert3DPrinting from "@/assets/3D Printing (1).pdf?url";
 import certCybersecurity from "@/assets/Introduction to Cybersecurity Awareness (1).pdf?url";
 import certWebsites from "@/assets/Effective Business Websites (1).pdf?url";
+import certAIPrompter from "@/assets/shazil-iqbal-khan-certificate.pdf?url";
 
 const certificates = [
-  { title: "3D Printing", issuer: "Professional Certification", category: "Technology", num: "01", pdf: cert3DPrinting },
-  { title: "Introduction to Cybersecurity Awareness", issuer: "Professional Certification", category: "Security", num: "02", pdf: certCybersecurity },
-  { title: "Effective Business Websites", issuer: "Professional Certification", category: "Web & Business", num: "03", pdf: certWebsites },
+  { title: "One Million Prompters - AI Initiative", issuer: "Dubai Future Foundation & Dubai Centre for AI", category: "Artificial Intelligence", num: "01", pdf: certAIPrompter },
+  { title: "3D Printing", issuer: "Professional Certification", category: "Technology", num: "02", pdf: cert3DPrinting },
+  { title: "Introduction to Cybersecurity Awareness", issuer: "Professional Certification", category: "Security", num: "03", pdf: certCybersecurity },
+  { title: "Effective Business Websites", issuer: "Professional Certification", category: "Web & Business", num: "04", pdf: certWebsites },
 ];
 
 const CertificatesSection = () => {
@@ -36,7 +38,7 @@ const CertificatesSection = () => {
           </p>
         </div>
 
-        <div className={`stagger-children ${visible ? "visible" : ""} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border`}>
+        <div className={`stagger-children ${visible ? "visible" : ""} grid grid-cols-1 sm:grid-cols-2 gap-px bg-border`}>
           {certificates.map((cert) => (
             <div
               key={cert.title}

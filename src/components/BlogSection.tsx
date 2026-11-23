@@ -2,9 +2,9 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ArrowUpRight } from "lucide-react";
 
 const posts = [
-  { title: "The Art of Minimal Design in 2024", desc: "Why less continues to be more in modern digital experiences, and how to apply minimalism without sacrificing usability.", date: "Mar 12, 2024", readTime: "5 min" },
-  { title: "Building Design Systems That Scale", desc: "A practical guide to creating design systems that grow with your product and empower entire teams.", date: "Feb 28, 2024", readTime: "8 min" },
-  { title: "From Concept to Launch: My Process", desc: "An inside look at how I take projects from initial research through final delivery.", date: "Jan 15, 2024", readTime: "6 min" },
+  { title: "Building Production AI Apps with Claude API", desc: "A practical guide to integrating LLMs into real applications, handling rate limits, prompt engineering best practices, and cost optimization.", date: "Mar 12, 2024", readTime: "8 min" },
+  { title: "Real-time Data with Supabase & PostgreSQL", desc: "How to build scalable real-time applications using Supabase, handling subscriptions, and optimizing database queries.", date: "Feb 28, 2024", readTime: "6 min" },
+  { title: "Computer Vision Annotation Pipelines", desc: "Setting up efficient image and video annotation workflows for AI training data preparation and quality control.", date: "Jan 15, 2024", readTime: "7 min" },
 ];
 
 const BlogSection = () => {
@@ -20,7 +20,7 @@ const BlogSection = () => {
           Blog
         </span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-display font-bold text-foreground mt-3 sm:mt-4 mb-12 sm:mb-16 md:mb-20 tracking-tight">
-          Latest Thoughts
+          Technical Insights
         </h2>
 
         <div className={`stagger-children ${visible ? "visible" : ""} flex flex-col`}>

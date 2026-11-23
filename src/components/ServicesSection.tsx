@@ -1,11 +1,11 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Palette, Monitor, Sparkles, MessageCircle, ArrowUpRight } from "lucide-react";
+import { Brain, Code2, Database, Boxes, ArrowUpRight } from "lucide-react";
 
 const services = [
-  { icon: Palette, title: "UI/UX Design", desc: "Intuitive interfaces that delight users and drive engagement through research-backed design decisions.", num: "01" },
-  { icon: Monitor, title: "Web Design", desc: "Responsive, performant websites that combine aesthetic beauty with seamless functionality.", num: "02" },
-  { icon: Sparkles, title: "Branding", desc: "Cohesive brand identities that communicate your story and resonate with your audience.", num: "03" },
-  { icon: MessageCircle, title: "Consulting", desc: "Strategic design guidance to help teams build better products and scale design operations.", num: "04" },
+  { icon: Brain, title: "AI Application Development", desc: "Building intelligent applications with LLM integration, prompt engineering, and AI-powered features that solve real-world problems.", num: "01" },
+  { icon: Code2, title: "Full-Stack Development", desc: "Modern web applications using React.js, Vite, Python, and RESTful APIs with clean architecture and real-time capabilities.", num: "02" },
+  { icon: Database, title: "Data & Backend Systems", desc: "Scalable database solutions with PostgreSQL, Supabase, real-time data workflows, and secure authentication systems.", num: "03" },
+  { icon: Boxes, title: "Data Annotation & CV", desc: "Computer vision workflows, image and video annotation, data labeling pipelines, and AI training dataset preparation.", num: "04" },
 ];
 
 const ServicesSection = () => {
@@ -21,7 +21,7 @@ const ServicesSection = () => {
           Services
         </span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-display font-bold text-foreground mt-3 sm:mt-4 mb-12 sm:mb-16 md:mb-20 tracking-tight">
-          What I Do
+          What I Build
         </h2>
 
         <div className={`stagger-children ${visible ? "visible" : ""} grid grid-cols-1 sm:grid-cols-2 gap-px bg-border`}>

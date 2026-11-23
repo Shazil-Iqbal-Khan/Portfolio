@@ -16,7 +16,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 md:pt-0 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-24 sm:pt-28 md:pt-32 lg:pt-20 overflow-hidden">
       {/* Grid background */}
       <div className="absolute inset-0 opacity-[0.055]" style={{
         backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
@@ -27,35 +27,35 @@ const HeroSection = () => {
       />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center min-h-[85vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
 
           {/* Left Content */}
-          <div className="relative z-10 order-2 lg:order-1 lg:col-span-5 py-8 lg:py-0">
+          <div className="relative z-10 order-2 lg:order-1 lg:col-span-5 py-0">
             <div className="hidden lg:block absolute -left-16 top-1/2"
               style={{ transform: `translateY(calc(-50% + ${scrollY * 0.04}px))` }}>
               <span className="text-vertical text-[10px] font-body font-medium tracking-[0.4em] uppercase text-muted-foreground/60">
-                Product designer
+                AI Engineer & Software Developer
               </span>
             </div>
 
-            <div className="lg:hidden mb-8 animate-fade-up">
+            <div className="lg:hidden mb-6 sm:mb-8 animate-fade-up">
               <span className="text-[10px] font-body font-medium tracking-[0.4em] uppercase text-muted-foreground/60">
-                Product designer
+                AI Engineer & Software Developer
               </span>
             </div>
 
             {/* Stats */}
-            <div className="flex gap-8 sm:gap-10 mb-10 md:mb-14 animate-fade-up">
-              <div>
-                <span className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground stat-number tracking-tight">+{projectCount}</span>
+            <div className="flex flex-wrap gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-10 md:mb-14 animate-fade-up">
+              <div className="min-w-[80px]">
+                <span className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground stat-number tracking-tight block">+{projectCount}</span>
                 <p className="text-[10px] sm:text-[11px] font-body font-medium tracking-[0.15em] uppercase text-muted-foreground mt-1.5">Projects</p>
               </div>
-              <div className="relative pl-8 sm:pl-10 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-px before:h-8 sm:before:h-10 before:bg-border">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground stat-number tracking-tight">+{startupCount}</span>
+              <div className="relative pl-6 sm:pl-8 lg:pl-10 min-w-[80px] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-px before:h-8 sm:before:h-10 before:bg-border">
+                <span className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground stat-number tracking-tight block">+{startupCount}</span>
                 <p className="text-[10px] sm:text-[11px] font-body font-medium tracking-[0.15em] uppercase text-muted-foreground mt-1.5">Startups</p>
               </div>
-              <div className="relative pl-8 sm:pl-10 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-px before:h-8 sm:before:h-10 before:bg-border">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground stat-number tracking-tight">{clientCount}%</span>
+              <div className="relative pl-6 sm:pl-8 lg:pl-10 min-w-[80px] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-px before:h-8 sm:before:h-10 before:bg-border">
+                <span className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground stat-number tracking-tight block">{clientCount}%</span>
                 <p className="text-[10px] sm:text-[11px] font-body font-medium tracking-[0.15em] uppercase text-muted-foreground mt-1.5">Satisfaction</p>
               </div>
             </div>
@@ -74,13 +74,13 @@ const HeroSection = () => {
             <div className="animate-fade-up-delay-2 flex items-center gap-3 sm:gap-4 mb-3">
               <div className="w-8 sm:w-12 h-px bg-foreground/25 line-draw" />
               <p className="text-sm sm:text-base font-body font-light text-muted-foreground tracking-wide">
-                It's <span className="text-foreground font-medium">M. Shazil Iqbal Khan</span> — a design wizard
+                It's <span className="text-foreground font-medium">M. Shazil Iqbal Khan</span> — an AI engineer
               </p>
             </div>
 
             {/* Value proposition */}
             <p className="animate-fade-up-delay-2 text-[13px] sm:text-sm font-body font-light text-muted-foreground leading-relaxed mb-8 sm:mb-10 max-w-sm">
-              I turn ideas into stunning digital products — UI/UX, branding, and web design that converts visitors into customers.
+              I build intelligent AI-powered applications, integrate cutting-edge LLMs, and develop practical software solutions that solve real problems.
             </p>
 
             {/* CTA Buttons */}
@@ -95,7 +95,7 @@ const HeroSection = () => {
                 href="#portfolio"
                 className="inline-flex items-center gap-2 border border-foreground/20 text-foreground px-6 sm:px-8 py-3 sm:py-3.5 text-[12px] sm:text-[13px] font-body font-medium tracking-[0.1em] uppercase hover:bg-foreground/5 transition-all duration-400"
               >
-                View Work
+                View Projects
               </a>
               <a
                 href="/resume.pdf"
@@ -123,7 +123,7 @@ const HeroSection = () => {
               style={{ transform: `translateY(${scrollY * -0.05}px)` }}>
               <img
                 src={heroPortrait}
-                alt="M. Shazil Iqbal Khan - Product Designer"
+                alt="M. Shazil Iqbal Khan - AI Engineer & Software Developer"
                 className="w-full h-auto object-contain animate-zoom-in drop-shadow-2xl"
                 style={{ filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))' }}
               />

@@ -1,11 +1,11 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { ShieldCheck, Star, Zap, Users } from "lucide-react";
+import { ShieldCheck, Star, Code, Zap } from "lucide-react";
 
 const trust = [
-  { icon: Star, label: "Top-Rated Designer", sub: "5★ on every project" },
-  { icon: Users, label: "200+ Happy Clients", sub: "Worldwide" },
-  { icon: Zap, label: "Fast Turnaround", sub: "On-time delivery" },
-  { icon: ShieldCheck, label: "Quality Guaranteed", sub: "Revisions included" },
+  { icon: Code, label: "AI & Full-Stack", sub: "Modern tech stack" },
+  { icon: Star, label: "200+ Projects", sub: "Successfully delivered" },
+  { icon: Zap, label: "Fast Development", sub: "Agile workflow" },
+  { icon: ShieldCheck, label: "Quality Code", sub: "Best practices" },
 ];
 
 const TrustBar = () => {

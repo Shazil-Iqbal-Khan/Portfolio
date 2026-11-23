@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Linkedin, Github } from "lucide-react";
 
 const navLinks = ["About Me", "Portfolio", "Services", "Certificates", "Blog"];
 
@@ -22,8 +22,8 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled ? "bg-background/95 backdrop-blur-2xl shadow-[0_1px_0_hsl(var(--border)/0.5)]" : "bg-transparent"
     }`}>
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between h-14 sm:h-16 md:h-20">
-        <a href="#" className="font-display text-lg sm:text-xl font-bold tracking-tight text-foreground">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between gap-4 h-14 sm:h-16 md:h-20">
+        <a href="#" className="font-display text-sm sm:text-base md:text-lg lg:text-xl font-bold tracking-tight text-foreground whitespace-nowrap flex-shrink-0">
           M. Shazil Iqbal Khan
         </a>
 
@@ -40,12 +40,35 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center gap-1.5 text-[13px] font-body font-medium text-foreground border border-foreground/15 px-5 py-2 hover:bg-foreground hover:text-primary-foreground transition-all duration-400 group"
-        >
-          Book A Call <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </a>
+        <div className="hidden md:flex items-center gap-4 lg:gap-6">
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.linkedin.com/in/shaziliqbalkhan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              aria-label="LinkedIn Profile"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+            <a
+              href="https://github.com/Shazil-Iqbal-Khan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              aria-label="GitHub Profile"
+            >
+              <Github className="w-4 h-4" />
+            </a>
+          </div>
+          
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-1.5 text-[13px] font-body font-medium text-foreground border border-foreground/15 px-5 py-2 hover:bg-foreground hover:text-primary-foreground transition-all duration-400 group"
+          >
+            Book A Call <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        </div>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -83,6 +106,27 @@ const Navbar = () => {
                 Book A Call <ArrowUpRight className="w-4 h-4" />
               </a>
               <p className="text-[12px] font-body text-muted-foreground mt-4">Programe.codeme@gmail.com</p>
+              
+              <div className="flex items-center gap-4 mt-6">
+                <a
+                  href="https://www.linkedin.com/in/shaziliqbalkhan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://github.com/Shazil-Iqbal-Khan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+                  aria-label="GitHub Profile"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

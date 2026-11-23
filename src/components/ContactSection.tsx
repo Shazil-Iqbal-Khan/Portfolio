@@ -44,10 +44,10 @@ const ContactSection = () => {
             Contact
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mt-3 sm:mt-4 tracking-tight leading-[1.05]">
-            Let's work<br />together
+            Let's build<br />something great
           </h2>
           <p className="text-sm sm:text-[15px] font-body font-light text-muted-foreground mt-4 sm:mt-6 leading-relaxed max-w-md mx-auto">
-            Have a project in mind? I'd love to hear about it. Let's create something extraordinary.
+            Have an AI project or software idea? I'd love to discuss how we can bring it to life with modern technology.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ const ContactSection = () => {
           <textarea
             name="message"
             rows={4}
-            placeholder="Tell me about your project..."
+            placeholder="Tell me about your project or idea..."
             required
             className="input-premium resize-none"
           />
@@ -116,15 +116,38 @@ const ContactSection = () => {
             Programe.codeme@gmail.com
           </a>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
-            {["Dribbble", "Behance", "LinkedIn", "Twitter"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                className="text-[11px] sm:text-[12px] font-body font-medium tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-foreground after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {social}
-              </a>
-            ))}
+            <a
+              href="https://www.linkedin.com/in/shaziliqbalkhan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] sm:text-[12px] font-body font-medium tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-foreground after:transition-all after:duration-300 hover:after:w-full"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/Shazil-Iqbal-Khan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] sm:text-[12px] font-body font-medium tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-foreground after:transition-all after:duration-300 hover:after:w-full"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://dribbble.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] sm:text-[12px] font-body font-medium tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-foreground after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Dribbble
+            </a>
+            <a
+              href="https://www.behance.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] sm:text-[12px] font-body font-medium tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-px after:bg-foreground after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Behance
+            </a>
           </div>
           <span className="text-[11px] sm:text-[12px] font-body text-muted-foreground">© 2025 M. Shazil Iqbal Khan</span>
         </div>

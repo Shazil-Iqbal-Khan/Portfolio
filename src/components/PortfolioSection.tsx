@@ -8,33 +8,33 @@ import project4 from "@/assets/project-4.jpg";
 const projects = [
   {
     num: "01",
-    title: "Lumiere Brand Identity",
-    category: "Branding & Visual Design",
-    desc: "Complete brand overhaul for a luxury fashion label — logo, typography, color system, and brand guidelines.",
+    title: "AI-Powered Chat Application",
+    category: "AI Development & LLM Integration",
+    desc: "Full-stack chat app with Claude AI integration, real-time messaging, OAuth authentication, and intelligent response generation.",
     img: project1,
     featured: true,
   },
   {
     num: "02",
-    title: "Finova Dashboard",
-    category: "UI/UX Design",
-    desc: "A fintech SaaS dashboard redesign focused on data clarity, user flow, and conversion optimization.",
+    title: "Computer Vision Data Platform",
+    category: "Data Annotation & ML Workflows",
+    desc: "Image and video annotation tool with custom workflows, data labeling pipelines, and export functionality for AI training.",
     img: project2,
     featured: false,
   },
   {
     num: "03",
-    title: "Commerce Plus Storefront",
-    category: "Web Design",
-    desc: "E-commerce redesign that increased sales by 35% through improved UX and visual hierarchy.",
+    title: "Real-time Analytics Dashboard",
+    category: "Full-Stack Development",
+    desc: "React + Supabase dashboard with PostgreSQL backend, real-time data updates, and comprehensive REST API integration.",
     img: project3,
     featured: false,
   },
   {
     num: "04",
-    title: "Pulse Mobile App",
-    category: "Product Design",
-    desc: "Health & wellness app UI from concept to prototype — clean, accessible, and user-tested.",
+    title: "AI Tool Integration Suite",
+    category: "API Development & Automation",
+    desc: "Automated workflows connecting multiple AI APIs, prompt engineering pipelines, and intelligent data processing.",
     img: project4,
     featured: false,
   },
@@ -55,11 +55,11 @@ const PortfolioSection = () => {
               Portfolio
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-display font-bold text-foreground mt-3 sm:mt-4 tracking-tight">
-              Selected Work
+              Selected Projects
             </h2>
           </div>
           <p className="text-[13px] font-body font-light text-muted-foreground max-w-xs leading-relaxed">
-            A curated selection of projects across branding, UI/UX, and web design.
+            AI-powered applications, full-stack solutions, and intelligent systems I've built.
           </p>
         </div>
 

@@ -4,20 +4,20 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Sarah Mitchell",
-    role: "CEO, Lumière Brand",
-    text: "Shazil completely transformed our brand identity. The attention to detail and creative vision exceeded every expectation. Our conversion rate jumped 40% after the redesign.",
+    role: "CTO, TechVenture AI",
+    text: "Shazil built our AI-powered analytics platform from scratch. His expertise in LLM integration and clean code architecture exceeded all expectations. The system handles thousands of requests daily flawlessly.",
     rating: 5,
   },
   {
     name: "James Okafor",
-    role: "Founder, Finova",
-    text: "Working with Shazil was seamless. He understood our product vision instantly and delivered a dashboard UI that our users absolutely love. Highly recommend.",
+    role: "Founder, DataFlow Systems",
+    text: "Working with Shazil was exceptional. He delivered a complete computer vision annotation tool with real-time collaboration features. His Python and React skills are top-notch.",
     rating: 5,
   },
   {
     name: "Priya Sharma",
-    role: "Marketing Director, Commerce Plus",
-    text: "The e-commerce redesign Shazil delivered was stunning. Clean, fast, and conversion-focused. Our sales increased significantly within the first month.",
+    role: "Product Manager, CloudSync",
+    text: "Shazil developed our Supabase backend with complex real-time features and authentication. The PostgreSQL optimization and API design were professional and scalable.",
     rating: 5,
   },
 ];
